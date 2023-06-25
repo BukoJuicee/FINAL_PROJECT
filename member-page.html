@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMIRNOFF</title>
+  <link rel="stylesheet" href="home-admin.css">
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="Pictures/Smirnoff-logo.png" alt="logo">
+    <nav>
+      <ul class="nav_links">
+        <li><a href="member-page.html">Home</a></li>
+        <li><a href="member-aboutUs.html">About</a></li>
+        <li><a href="memberProduct.html">Products</a></li>
+        <li><a href="memberContact.html">Contact</a></li>
+        <li><button onclick="logout()">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div style="display: flex; width: 100%; height: 100vh; align-items: center; justify-content: center; font-size: 5em;">
+    Hi, Welcome &nbsp;<span class="username" id="username"></span>!
+  </div>
+
+  
+
+  <script>
+    const user = localStorage.getItem('users');
+    const key = JSON.parse(user);
+  
+    document.getElementById('username').textContent = key['username'];
+
+    function logout() {
+      window.location.replace('Home.html');
+
+    }
+  </script>
+</body>
+</html>

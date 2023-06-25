@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="login-form.css">
 </head>
 <body>
-    <div class="loginContainer">
-        <form id="loginForm" class="form">
+    <div class="loginContainer" style="position: relative;">
+        <form id="loginForm" class="form" style="visibility: hidden; position: absolute;">
             <h2>Login</h2>    
             <label for="text"><b>Username</b></label>
             <input type="text" id="username" placeholder="Username">
@@ -22,7 +22,7 @@
             </div>
         </form>
 
-        <form id="registrationForm" class="form" style="display: none;">
+        <form id="registrationForm" class="form" style="position: absolute;">
             <h2>Registration</h2>
             <div class="container">
                 <div class="input">
